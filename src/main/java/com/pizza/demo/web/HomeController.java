@@ -1,4 +1,4 @@
-package com.pizza.demo;
+package com.pizza.demo.web;
 
 import com.pizza.demo.model.Ingredient;
 import org.springframework.stereotype.Controller;
@@ -8,14 +8,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.Arrays;
 import java.util.List;
 import com.pizza.demo.model.Ingredient.Type;
-import org.springframework.web.bind.annotation.RestController;
 
-@Controller            // <1>
+@Controller
 public class HomeController {
 
-  @GetMapping("/")     // <2>
+  @GetMapping("/")
   public String home() {
-    return "home";     // <3>
+    return "home";
   }
   @GetMapping("/home")
   public String showDesignForm(Model model) {
